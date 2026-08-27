@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python -m py_compile object_detector\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python -c \"from object_detector import pixel_box; assert pixel_box\\(\\[100, 200, 500, 800\\], 640, 480\\) == \\(128, 48, 512, 240\\); print\\('pixel_box check passed'\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
