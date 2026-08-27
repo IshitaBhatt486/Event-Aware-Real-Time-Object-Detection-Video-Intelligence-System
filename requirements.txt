@@ -1,4 +1,5 @@
 google-genai
+groq
 opencv-python
 python-dotenv
 ultralytics

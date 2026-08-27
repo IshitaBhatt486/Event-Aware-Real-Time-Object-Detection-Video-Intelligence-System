@@ -1,4 +1,4 @@
-# Gemini Object Detector
+# Object Detector
 
 Detect objects from a live webcam feed with local YOLO and optionally enrich detections with Gemini, then display the result with OpenCV.
 
@@ -12,11 +12,20 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-Create a Gemini API key in Google AI Studio, then set it in the environment. The key is never stored in the project:
+For the optional real-time Gemini enrichment, create a Gemini API key in Google AI Studio and set it in the environment. The key is never stored in the project:
 
 ```powershell
 $env:GEMINI_API_KEY = "your-api-key"
 ```
+
+The separate event-query CLI uses Groq for natural-language answers. Create a Groq API key and set it before running `query_events.py`:
+
+```powershell
+$env:GROQ_API_KEY = "your-groq-api-key"
+python query_events.py
+```
+
+Use `python query_events.py --no-llm` to query the saved events without any API.
 
 On macOS or Linux:
 
