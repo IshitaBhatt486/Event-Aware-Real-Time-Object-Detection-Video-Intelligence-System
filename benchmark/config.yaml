@@ -1,0 +1,38 @@
+# Paths are relative to the repository root unless absolute.
+model: yolo11n.pt
+benchmark_videos: []
+paths:
+  raw_output: benchmark/results/raw
+  raw_measurements: benchmark/results/raw/all_measurements.jsonl
+  detection_ground_truth: benchmark/datasets/ground_truth/detection.json
+  tracking_ground_truth: benchmark/datasets/ground_truth/tracking.json
+  relationships_ground_truth: benchmark/datasets/ground_truth/relationships.json
+  temporal_ground_truth: benchmark/datasets/ground_truth/temporal_events.json
+  semantic_ground_truth: benchmark/datasets/ground_truth/semantic_events.json
+  anomaly_ground_truth: benchmark/datasets/ground_truth/anomalies.json
+evaluation:
+  confidence_threshold: 0.4
+  iou_threshold: 0.5
+  temporal_tolerance_seconds: 2.0
+  semantic_tolerance_seconds: 2.0
+  anomaly_tolerance_seconds: 2.0
+  temporal_event_types: [PICKED_UP, PLACED_DOWN, MOVED_FROM_TO, ENTERED, LEFT, APPROACHED, MOVED_AWAY]
+relationship:
+  near_threshold: 100.0
+  far_threshold: 200.0
+  directional_margin: 10.0
+  movement_threshold: 20.0
+temporal:
+  window_seconds: 5.0
+  stationary_frames: 2
+gemini:
+  enabled: false
+  baseline_interval_seconds: 12.0
+  event_driven_enabled: true
+  cooldown_seconds: 10.0
+  minimum_confidence: 0.4
+benchmark:
+  duration_seconds: null
+  dataset_name: custom
+  dataset_type: manually_labeled_custom_video
+  description: "Describe the videos and annotation protocol here."

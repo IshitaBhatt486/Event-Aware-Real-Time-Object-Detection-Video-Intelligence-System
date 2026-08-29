@@ -1,0 +1,16 @@
+section,metric,value
+benchmark,videos,0
+benchmark,frames,0
+benchmark,measured_at,2026-08-27T13:24:27.923310+00:00
+gemini,baseline_interval_seconds,12.0
+gemini,event_driven_calls,
+gemini,baseline_calls,
+gemini,call_reduction_percent,
+detection,status,unavailable
+tracking,status,unavailable
+relationships,status,unavailable
+temporal_events,status,unavailable
+semantic_events,status,unavailable
+anomalies,status,unavailable
+latency_ms,status,unavailable
+throughput,status,unavailable

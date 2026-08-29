@@ -1,3 +1,13 @@
+
+## Benchmark evaluation
+
+The isolated `benchmark/` framework evaluates detection, tracking, relationships, temporal events, Gemini semantic events, anomalies, latency, and throughput without changing the real-time pipeline. Add videos and labels under `benchmark/datasets/`, configure paths in `benchmark/config.yaml`, install `benchmark/requirements.txt`, and run:
+
+```powershell
+python benchmark/scripts/benchmark_pipeline.py --config benchmark/config.yaml
+```
+
+Raw measurements, JSON/CSV metrics, and a measured-only Markdown report are written under `benchmark/results/` and `benchmark/reports/`. See `benchmark/README.md` and `benchmark/datasets/README.md` for schemas and public/custom dataset guidance.
 # Object Detector
 
 Detect objects from a live webcam feed with local YOLO and optionally enrich detections with Gemini, then display the result with OpenCV.
@@ -54,6 +64,8 @@ python object_detector.py --no-gemini
 To change the optional Gemini interval:
 
 ```powershell
+python object_detector.py --gemini-cooldown 60
+# or the alias:
 python object_detector.py --interval 60
 ```
 

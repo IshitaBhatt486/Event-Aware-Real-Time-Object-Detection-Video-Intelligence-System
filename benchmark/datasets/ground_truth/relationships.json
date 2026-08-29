@@ -1,0 +1,6 @@
+{
+  "video_id": "example",
+  "relationships": [
+    {"frame_id": 1, "timestamp": 0.0, "subject_id": "person-1", "object_id": "cup-1", "relation": "LEFT_OF"}
+  ]
+}

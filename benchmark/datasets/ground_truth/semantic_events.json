@@ -1,0 +1,6 @@
+{
+  "video_id": "example",
+  "events": [
+    {"event_type": "PERSON_PICKED_UP_OBJECT", "timestamp": 12.5, "subject_id": "person-1", "object_id": "cup-1", "object_class": "cup"}
+  ]
+}

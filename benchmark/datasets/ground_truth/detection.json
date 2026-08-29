@@ -1,0 +1,6 @@
+{
+  "video_id": "example",
+  "frames": [
+    {"frame_id": 1, "timestamp": 0.0, "class": "person", "bbox": [10, 20, 100, 220], "confidence": 1.0}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "video_id": "example",
+  "anomalies": [
+    {"anomaly_type": "unusual_interaction", "start_time": 30.0, "end_time": 35.0, "description": "Describe the labeled anomaly."}
+  ]
+}

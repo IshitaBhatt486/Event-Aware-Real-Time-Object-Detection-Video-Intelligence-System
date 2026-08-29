@@ -317,8 +317,12 @@ def main() -> None:
         help="Stationary frames required before PICKED_UP (default: 2)",
     )
     parser.add_argument(
-        "--gemini-cooldown", type=float, default=10.0,
-        help="Minimum seconds between Gemini calls (default: 10.0)",
+        "--interval",
+        "--gemini-cooldown",
+        dest="gemini_cooldown",
+        type=float,
+        default=10.0,
+        help="Minimum seconds between Gemini calls (default: 10.0; --interval is an alias)",
     )
     parser.add_argument(
         "--gemini-min-confidence", type=float, default=0.4,
