@@ -35,7 +35,3 @@ python query_events.py --no-llm
 ## Project guide
 
 The complete architecture, execution walkthrough, trade-offs, limitations, interview questions, benchmark usage, and improvement plan are in [PROJECT_GUIDE.md](PROJECT_GUIDE.md). Benchmark-specific instructions are in [benchmark/README.md](benchmark/README.md).
-
-## Documentation policy
-
-Any functional addition must update `PROJECT_GUIDE.md` and, when user-facing, this README. The pull-request template and documentation workflow enforce that source changes include a documentation change; enable the workflow as a required branch check in repository settings. See [CONTRIBUTING.md](CONTRIBUTING.md).
