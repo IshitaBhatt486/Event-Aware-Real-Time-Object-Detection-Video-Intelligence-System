@@ -1,0 +1,28 @@
+name: Documentation contract
+
+on:
+  pull_request:
+    paths:
+      - "**.py"
+      - "README.md"
+      - "PROJECT_GUIDE.md"
+      - "CONTRIBUTING.md"
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require documentation with Python changes
+        shell: bash
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          changed="$(git diff --name-only "$base" HEAD)"
+          if echo "$changed" | grep -qE '\.py$'; then
+            if ! echo "$changed" | grep -qE '^(README\.md|PROJECT_GUIDE\.md|CONTRIBUTING\.md|docs/)'; then
+              echo "Python changes require an accompanying documentation update."
+              exit 1
+            fi
+          fi
